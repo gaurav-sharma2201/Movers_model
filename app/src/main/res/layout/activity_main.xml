@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/card1"
+        android:layout_marginTop="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/picking"
+            android:layout_alignTop="@+id/pick"
+            android:layout_alignBottom="@+id/pick"
+            android:scaleType="fitCenter"
+            android:id="@+id/pickimg"
+            />
+
+            <AutoCompleteTextView
+                android:id="@+id/pick"
+                style="@style/Theme.AppCompat.DayNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pickimg"
+                android:hint="Add Pick Up location"
+                android:textSize="22sp"
+                android:background="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/card1"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/picking"
+                android:layout_alignTop="@+id/drop"
+                android:layout_alignBottom="@+id/drop"
+                android:scaleType="fitCenter"
+                android:id="@+id/dropimg"
+                />
+
+            <EditText
+                android:id="@+id/drop"
+                style="@style/Theme.AppCompat.DayNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/dropimg"
+                android:hint="Add Drop location"
+                android:background="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
+
